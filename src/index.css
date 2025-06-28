@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: 'Crimson Text', serif;
+}
+
+/* Custom flame animations */
+@keyframes flame-flicker {
+  0%, 100% { 
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.9;
+  }
+  25% { 
+    transform: scale(1.05) rotate(1deg);
+    opacity: 0.95;
+  }
+  50% { 
+    transform: scale(0.98) rotate(-0.5deg);
+    opacity: 0.85;
+  }
+  75% { 
+    transform: scale(1.02) rotate(0.5deg);
+    opacity: 0.92;
+  }
+}
+
+@keyframes flame-flicker-delayed {
+  0%, 100% { 
+    transform: scale(0.95) rotate(0.5deg);
+    opacity: 0.8;
+  }
+  33% { 
+    transform: scale(1.02) rotate(-1deg);
+    opacity: 0.9;
+  }
+  66% { 
+    transform: scale(0.96) rotate(1deg);
+    opacity: 0.75;
+  }
+}
+
+.flame-flicker {
+  animation: flame-flicker 3s ease-in-out infinite;
+}
+
+.flame-flicker-delayed {
+  animation: flame-flicker-delayed 2.5s ease-in-out infinite 0.5s;
+}
+
+/* Custom gradient utilities */
+@layer utilities {
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+button, input {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced focus styles for accessibility */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #F59E0B;
+  outline-offset: 2px;
+}
+
+/* Subtle pulse animation for the glow effect */
+@keyframes subtle-pulse {
+  0%, 100% { 
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.2;
+    transform: scale(1.05);
+  }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 4s ease-in-out infinite;
+}
