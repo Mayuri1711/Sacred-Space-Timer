@@ -21,27 +21,3 @@ We used a **single prompt to ChatGPT** to generate the entire fullscreen, offlin
 * Fully responsive, fullscreen layout
 
 All assets were embedded or base64 encoded to ensure true offline capability.
-
----
-
-## **Challenges we ran into**
-
-The challenge was philosophical: could a single, well-crafted prompt communicate not just UI structure, but emotional tone, pacing, and sensory aesthetics? Would the result feel sacred and intentional—or merely functional?
-
----
-
-## **Accomplishments that we're proud of**
-
-* **One prompt. One build.** A full meditative experience generated from a single interaction.
-* Created something calming and emotionally resonant using only core web tech.
-* Designed an experience that encourages presence and mindfulness, not productivity.
-
----
-
-## **What we learned**
-
-* A single prompt, when thoughtfully crafted, can yield surprisingly complete and beautiful results.
-* The emotional tone of a digital space can be guided by careful prompt writing, not just code.
-* Constraints (like no frameworks or backends) can sharpen creativity.
-
----
